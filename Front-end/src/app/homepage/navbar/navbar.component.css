@@ -1,0 +1,196 @@
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+  color: #fff;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-toggler-icon,
+.navbar-scrolled .navbar-brand {
+  color: #605d5d;
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-scroll,
+.navbar-scrolled {
+  background-color: #cbbcb1;
+}
+
+.mask-custom {
+  backdrop-filter: blur(5px);
+  background-color: rgba(42, 40, 40, 0.15);
+}
+
+.navbar-brand {
+  font-size: 33px;
+  letter-spacing: 1px;
+}
+
+body {
+  background-color: #46404000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-image: url('../../../assets/images/front-view-woman-holding-paper-heart-with-heartbeat.jpg');
+  width: 100%;
+  height: auto;  
+}
+
+  /*text styles*/
+
+  @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Courier Prime", monospace; 
+  }
+  body {
+    background-color: #46404000;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+  }
+  .header{
+    display: inline-flex;
+  }
+  .header .fixed {
+    font-size: 70px;
+    font-weight: 500;
+    color: #E82B40;
+    font-weight: 900;
+  }
+  .header .typed{
+    margin-left: 20px;
+    line-height: 90px;
+    height: 90px;
+    overflow: hidden;
+   
+  }
+  .header .typed li{
+    color: #E82B40;
+    font-size: 70px;
+    font-weight: 600;
+    list-style: none;
+    animation: slide 4.5s steps(3) infinite;
+    position: relative;
+    top: 0;
+  }
+  @keyframes slide{
+    100%{
+      top: -360px;
+    }
+  }
+  .header .typed li span{
+    position: relative;
+  }
+  .header .typed li span::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    border-left: 2px solid #02020228;
+    background: #f9faf7;
+    animation: cursor 1s infinite step-end, typing 1.5s steps(8) infinite;
+  }
+  @keyframes cursor{
+    0%, 100%{border-color: transparent;}
+    50%{border-color: #E82B40;}
+  }
+  @keyframes typing{
+    100%{ left: 20ch;}
+  }
+  @keyframes slide{
+    100%{top:-270px}
+    }
+ 
+    /*button*/
+
+    .text-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #F5F0EA;
+      font-size: 24px;
+      text-shadow: 2px 2px 4px rgba(207, 202, 202, 0.5);
+    }
+    
+    .btn-container {
+      margin-top: 20px;
+    }
+    .btn:last-child {
+      margin-bottom: 0; /* Remove margin-bottom for the last button */
+    }
+    
+    .btn {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 15px 40px;
+      display: inline-block;
+      border-radius: 100px;
+      transition: all 0.2s;
+      position: relative;
+      margin-bottom: 10px; /* Add margin-bottom for spacing */
+    }
+
+    
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px #b4b1b0;
+    }
+    
+    .btn:active {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .btn-white {
+      background-color:#cec8c8ab;
+      color: #6e6363;
+    }
+    
+    .btn::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.4s;
+    }
+    
+    .btn-white::after {
+      background-color: #575252be;
+    }
+    
+    .btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+    
+    .btn-animated {
+      animation: moveInBottom 5s ease-out;
+      animation-fill-mode: backwards;
+    }
+    
+    @keyframes moveInBottom {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+    
+      100% {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
