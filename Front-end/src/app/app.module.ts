@@ -21,6 +21,8 @@ import { HowtodonateComponent } from './homepage/howtodonate/howtodonate.compone
 import { HowtootganizeComponent } from './homepage/howtootganize/howtootganize.component';
 import { ErrorComponent } from './error/error.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 const appRoute: Routes = [
@@ -67,6 +69,9 @@ const appRoute: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoute)
   ],
   providers: [],
